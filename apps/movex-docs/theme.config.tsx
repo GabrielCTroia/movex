@@ -10,6 +10,26 @@ const tags = {
 
 const config: DocsThemeConfig = {
   logo: <Logo />,
+  banner: {
+    key: 'dev-version-aug-2023',
+    text: () => (
+      <span>
+        Movex is feature-complete yet still in Development for now.
+        Contributors and feedback are much{' '}
+        <a
+          href="https://github.com/movesthatmatter/movex/issues"
+          target='_blank'
+          style={{
+            textDecoration: 'underline',
+          }}
+        >
+          appreciated
+        </a>
+        !
+      </span>
+    ),
+    dismissible: true,
+  },
   project: {
     link: 'https://github.com/movesthatmatter/movex',
   },
@@ -20,7 +40,7 @@ const config: DocsThemeConfig = {
   head: (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta property="og:title" content="Movex State Sync" />
+      <meta property="og:title" content="Movex" />
       <meta property="og:description" content={tags.description} />
       <meta name="apple-mobile-web-app-title" content="Movex" />
     </>
